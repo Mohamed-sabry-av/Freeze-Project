@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* يضمن أن الحواف padding+border لا تزيد عن عرض العنصر */
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-y: scroll; /* يُظهر القدرة على التمرير */
+  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
+}
+
+/* Scroll Display */
+::-webkit-scrollbar {
+  width: 12px; /* عرض شريط التمرير */
+  height: 12px; /* ارتفاع شريط التمرير الأفقي */
+}
+
+/* مسار شريط التمرير */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* لون المسار */
+  border-radius: 10px; /* زوايا مستديرة */
+}
+
+/* مقبض شريط التمرير */
+::-webkit-scrollbar-thumb {
+  background: #c04848; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    top,
+    #480048,
+    #c04848
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    top,
+    #480048,
+    #c04848
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px; /* زوايا مستديرة */
+}
+
+/* عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* لون المقبض عند التمرير */
+}
+
+/* إذا كان شريط التمرير الأفقي مطلوبًا */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* لون الزاوية عند تقاطع شريطي التمرير العمودي والأفقي */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eeebec;
+  position: sticky;
+  top: 0;
+  font-size: 16px;
+  z-index: 50;
+  width: 100%;
+  padding: 0 0px;
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 40px 30px;
+  margin: 0 auto;
+}
+.logo {
+  width: 155px;
+  display: flex;
+  padding-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar styles */
+
+/* #navBar_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+    width: 100%; 
+}*/
+
+.navbar_list {
+  margin: 0 15px;
+}
+.navbar_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 125px;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  /* Font */
+  font-family: "Roboto", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 19px;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+.navbar_item:hover {
+  color: #cb3362;
+  font-size: 17px;
+}
+
+/* Burger menuBar !! */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  z-index: 99;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Home Body sectiong */
+.homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg_image {
+  display: flex;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+  }
+}
+
+/* Uder Home photo section */
+.homeDetails {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #eeebec;
+  padding: 20px 10px;
+  font-family: "Roboto", serif;
+}
+.detailsImg {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%;
+}
+
+.details_1 {
+  background: #ee0979; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.myName {
+  background: #23074d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cc5333,
+    #23074d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cc5333,
+    #23074d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  color: transparent;
+}
+.title {
+  height: 33px;
+  font-size: large;
+}
+
+/* Second NavBar section ! with Yellow color */
+.secNavBar_container {
+  display: flex;
+  justify-content: center;
+  background-color: #c8c10d;
+  padding: 40px;
+  border-radius: 10px;
+  position: sticky; /* تثبيت القائمة */
+  top: 0;
+  z-index: 10;
+}
+
+.secUlBtn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 8px;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 16px;
+  gap: 90px;
+}
+
+.secUlBtn li {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  list-style: none;
+  font-family: "Roboto";
+  cursor: pointer; /* شكل المؤشر */
+  transition: all 0.3s ease;
+  color: #fff;
+  border-radius: 5px; /* الزوايا المستديرة */
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #cb3362;
+  font-size: 20px;
+  .icon {
+    font-size: 40px;
+  }
+}
+
+.icon {
+  font-size: 30px;
+  transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .secUlBtn {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+  }
+  .btn h1 {
+    display: none;
+  }
+  .icon {
+    font-size: 30px;
+  }
+}
+/* هنحاول نربطها مع ال */
+
+
+
+
+/* جزء الصفحات المتفرعة الداخلية */
+/* sub pages Section*/
+/* Products */
+.section {
+  display: none; /* إخفاء جميع الأقسام */
+  /* padding: 40px;
+  text-align: center; */
+}
+
+.section.active {
+  display: block; /* عرض القسم النشط */
+}
+.producsContainer {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: auto;
+}
+.products {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 7px 0 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+}
+.products h2 {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+.first-line-products {
+  color: #ee0979;
+  font-size: 12px;
+  font-weight: 111;
+}
+.words {
+  padding: 12px 12px;
+}
+.firstTitle {
+  background: #ee0979; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  margin-bottom: 8px;
+}
+.firstContent {
+  color: gray;
+  font-size: 16px;
+}
+.proTitle {
+  text-transform: uppercase;
+}
+@media screen and (max-width:800px) {
+  .products{
+    flex-direction: column;
+  }
+}
+
+/* About US */
+.storyHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ebebed;
+  margin: 0;
+  max-width: none;
+  min-height: 249px;
+  overflow: hidden;
+}
+/* About us Body */
+.aboutBody {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 7px 0 57px;
+}
+
+.aboutBody h1 {
+  color: #ee0979;
+}
+.aboutBody p {
+  font-size: 18px;
+}
+
+/* Location and Contact form */
+.location {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+/* First the Form */
+.contact-form {
+  background-color: #eeebec;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.contact-form div {
+  margin-bottom: 14px;
+}
+.contact-form label {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  border: 1px solid #ee0979;
+  border-radius: 4px;
+}
+.contact-form button {
+  background-color: #cb3362;
+  color: white;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #a1284a;
+}
+
+/* Second : the Map */
+.map {
+  border-radius: 8px;
+  border: 5px solid #ee0979;
+  margin-top: 7px;
+}
+.detailsLocation {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  align-items: end;
+  width: 100%;
+  max-width: 500px;
+  align-items: flex-end;
+}
+.detailsLocation h1 {
+  color: #a1284a;
+  font-size: 30px;
+}
+.detailsLocation p {
+  font-size: 19px;
+}
+
+/* Footer Section */
+
+.footer {
+  background-color: #cb3362;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-decoration: none;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.madeBy {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 120px;
+  font-size: 13px;
+}
+
+.social {
+  font-size: 35px;
+  color: wheat;
+  transition: all 0.3s ease;
+}
+
+.social:hover {
+  font-size: 39px;
+  color: #333;
+}
+

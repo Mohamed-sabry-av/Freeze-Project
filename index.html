@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freeeze</title>
+    <link rel="styleSheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top oh Navigation bar -->
+    <div class="header">
+      <div class="headerContainer">
+        <a href="#home" class="active"
+          ><img src="logo.png" alt="Freeeze" class="logo"
+        /></a>
+
+        <ul id="navBar_buttons" class="nav-links">
+          <li class="navbar-list">
+            <a href="#home" class="navbar_item" id="homePage">HOME</a>
+          </li>
+          <li class="navbar-list">
+            <a href="#about" class="navbar_item" id="aboutPage">ABOUT</a>
+          </li>
+          <li class="navbar-list">
+            <a href="#product" class="navbar_item" id="blogPage">PRODUCTS</a>
+          </li>
+          <li class="navbar-list">
+            <a href="#location" class="navbar_item" id="contactPage">CONTACT</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="homePage">
+      <img class="bg_image" src="bg-home.jpg" alt="photo" />
+    </div>
+
+    <!-- The Section under the Home photo -->
+    <div class="homeDetails">
+      <div class="content">
+        <p class="title">NEW PRODUCT</p>
+        <h1 class="details_1">The Twist of Healthy Yogurt</h1>
+        <h5>Designed by <span class="myName">Mohamed Sabry</span></h5>
+      </div>
+      <div class="contentImage">
+        <img src="yogurt.jpg" alt="photo" class="detailsImg" />
+      </div>
+    </div>
+
+    <!-- Second Bar Buttons -->
+    <div class="secNavBar_container">
+      <ul class="secUlBtn">
+        <li>
+          <a href="#product" data-target="product" class="btn">
+            <i class="fa-solid fa-utensils icon"></i>
+            <h1>Product</h1>
+          </a>
+        </li>
+        <li>
+          <a href="#about" data-target="about" class="btn">
+            <i class="fa-solid fa-address-card icon"></i>
+            <h1>About Us</h1>
+          </a>
+        </li>
+        <li>
+          <a href="#about" data-target="about" class="btn">
+            <i class="fa-solid fa-book icon"></i>
+            <h1>Our Story</h1>
+          </a>
+        </li>
+        <li>
+          <a href="#location" data-target="location" class="btn">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <h1>Our Locations</h1>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- هنبدأ نعمل الصفحات الداخلية لكل ليست موجوده  -->
+    <!-- Products -->
+    <div id="product" class="section" style="display: none">
+      <div class="producsContainer">
+        <ul class="products">
+          <li class="words">
+            <h1 class="firstTitle">All Time Classic</h1>
+            <p class="firstContent">
+              choose between a colorful and tasteful iceCreams that we choose
+              for you with a high quality and low price you'll surprise!
+            </p>
+          </li>
+          <li class="first-line-products" id="kiwi">
+            <img src="kiwi.jpg" alt="kiwi" />
+            <h2 class="proTitle">Kiwi</h2>
+          </li>
+          <li class="first-line-products" id="mango">
+            <img src="mango.jpg" alt="mango" />
+            <h2 class="">Mango</h2>
+          </li>
+          <li class="first-line-products" id="cantaloupe">
+            <img src="cantaloupe.jpg" alt="cantaloupe" />
+            <h2 class="proTitle">Cantaloupe</h2>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="products">
+          <li class="words">
+            <h1 class="firstTitle">Berry Special</h1>
+            <p class="firstContent">
+              choose between a colorful and tasteful iceCreams that we choose
+              for you with a high quality and low price you'll surprise!
+            </p>
+          </li>
+          <li class="first-line-products" id="blackberry">
+            <img src="blackberry.jpg" alt="blackberry" />
+            <h2 class="proTitle">Blackberry</h2>
+          </li>
+          <li class="first-line-products" id="Strawberry">
+            <img src="blackberry.jpg" alt="mango" />
+            <h2 class="proTitle">Strawberry</h2>
+          </li>
+          <li class="first-line-products" id="cantaloupe">
+            <img src="blueberry.jpg" alt="blueberry" />
+            <h2 class="proTitle">Blueberry</h2>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="products">
+          <li class="words">
+            <h1 class="firstTitle">Fruit Blast</h1>
+            <p class="firstContent">
+              choose between a colorful and tasteful iceCreams that we choose
+              for you with a high quality and low price you'll surprise!
+            </p>
+          </li>
+          <li class="first-line-products" id="grapes">
+            <img src="grapes.jpg" alt="grapes" />
+            <h2 class="proTitle">grapes</h2>
+          </li>
+          <li class="first-line-products" id="green-apple">
+            <img src="green-apple.jpg" alt="green-apple" />
+            <h2 class="proTitle">green-apple</h2>
+          </li>
+          <li class="first-line-products" id="Pineapple">
+            <img src="Pineapple.jpg" alt="Pineapple" />
+            <h2 class="proTitle">Pineapple</h2>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About US -->
+    <div id="about" class="section" style="display: none">
+      <div class="storyHeader">
+        <img src="bg-header-about.jpg" alt="header" class="profile" />
+      </div>
+      <div class="aboutBody">
+        <h1 class="AboutTitle">About Us</h1>
+        <p class="AboutContent">
+          Welcome to Freeeze, the home of the healthiest and most delicious
+          yogurt! Our passion is to provide our customers with a product that is
+          both nutritious and enjoyable. We pride ourselves on using the highest
+          quality ingredients, sourced from local farms, and ensuring each batch
+          is made with care and love.
+        </p>
+
+        <p class="AboutContent">
+          At Freeeze, we believe in the power of healthy living and the
+          importance of a balanced diet. Our mission is to make healthy eating
+          accessible to everyone, and to provide a tasty alternative that
+          supports your well-being.
+        </p>
+      </div>
+    </div>
+
+    <!-- lOCATIONS -->
+    <div id="location" class="section" style="display: none">
+      <div class="location">
+        <div class="map">
+          <iframe
+            clas="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13811.597862450633!2d31.457044100000015!3d30.068416100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145817fbb4c9ffc3%3A0x15b98ff0d518e895!2sB.TECH%20MAX!5e0!3m2!1sar!2seg!4v1733135200623!5m2!1sar!2seg"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="detailsLocation">
+          <h1>العنوان الرئيسي</h1>
+          <p>
+            تاج سيتي - قطعة رقم ٥ / ج - مجاوره ج, أمام جى دبليو ماريوت الدائري -
+            حي شرق مدينة نصر, القاهرة, 11865
+          </p>
+          <h1>هاتف رقم</h1>
+          <p>0100000200 فرع مصر الجديدة</p>
+          <p>0122222299 فرع وسط البلد</p>
+        </div>
+
+        <!-- Form -->
+        <form action="index.html" method="POST" class="contact-form">
+          <div>
+            <label for="Name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              class="name"
+              name="Name"
+              required
+              placeholder="Your Name"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="yourEmail@gmail.com"
+            />
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea
+              name="message"
+              id="message"
+              required
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <button class="contactButton" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <!-- footer for home Page -->
+    <div class="footer">
+      <div class="footerContainer">
+        <div class="connect">
+          <a href="facebook.com">
+            <i class="fa-brands fa-facebook social"></i>
+          </a>
+          <a href="twitter.com">
+            <i class="fa-brands fa-twitter social"></i>
+          </a>
+          <a href="twitter.com">
+            <i class="fa-brands fa-instagram social"></i>
+          </a>
+        </div>
+      </div>
+      <div class="madeBy">
+        <p>© 2024 Freeeze. All Rights Reserved.</p>
+        <p>
+          This web is Designed by <span class="MyNameFoot">Mohamed sabry</span>
+        </p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
