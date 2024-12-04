@@ -448,9 +448,7 @@ body {
   display: block;
   margin: 0 auto;
 }
-.ourHeader {
-  background-color: #918e9d;
-}
+
 .story {
   display: flex;
   flex-direction: column;
