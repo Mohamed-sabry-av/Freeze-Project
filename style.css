@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box; /* يضمن أن الحواف padding+border لا تزيد عن عرض العنصر */
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -226,13 +226,13 @@ body {
     #ff6a00,
     #ee0979
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ff6a00,
-    #ee0979
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ff6a00, #ee0979);
 }
-
+@media screen and (max-width: 800px) {
+  .details_1 {
+    font-size: 27px;
+  }
+}
 .myName {
   background: #23074d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -314,8 +314,9 @@ body {
 @media screen and (max-width: 800px) {
   .secUlBtn {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* توزيع الأزرار بشكل متساوي */
     padding: 0;
+    gap: 20px; /* تقليل الفجوة بين الأزرار */
   }
   .btn {
     display: flex;
@@ -323,18 +324,17 @@ body {
     align-items: center;
     text-align: center;
     font-size: 14px;
+    width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
   }
   .btn h1 {
-    display: none;
+    display: flex;
+    font-size: 15px;
   }
   .icon {
     font-size: 30px;
   }
 }
 /* هنحاول نربطها مع ال */
-
-
-
 
 /* جزء الصفحات المتفرعة الداخلية */
 /* sub pages Section*/
@@ -399,8 +399,8 @@ body {
 .proTitle {
   text-transform: uppercase;
 }
-@media screen and (max-width:800px) {
-  .products{
+@media screen and (max-width: 800px) {
+  .products {
     flex-direction: column;
   }
 }
@@ -437,6 +437,47 @@ body {
   color: #ee0979;
 }
 .aboutBody p {
+  font-size: 18px;
+}
+
+/* Our Story Section */
+.storyImg {
+  width: 100%;
+  max-width: 600px; /* يمكنك تعديل الحجم الأقصى هنا حسب رغبتك */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.ourHeader {
+  background-color: #918e9d;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.storyBody {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 7px 0 57px;
+}
+.storyBody h1 {
+  color: #ee0979;
+}
+.storyBody p {
   font-size: 18px;
 }
 
@@ -560,4 +601,3 @@ body {
   font-size: 39px;
   color: #333;
 }
-
